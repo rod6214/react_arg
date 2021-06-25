@@ -21,7 +21,6 @@ module.exports = {
     },
 
     entry: ['webpack-hot-middleware/client?path=/__webpack_hmr&reload=true&name=index', 'babel-polyfill', './src/index.js'],
-    // entry: ['babel-polyfill', './src/index.js'],
 
     performance: {
         hints: "warning",
@@ -58,7 +57,20 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/i,
                 exclude: /node_module/,
-                use: ['babel-loader']
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ["@babel/preset-env", {
+                                "corejs": "2",
+                                "useBuiltIns": "usage"
+                            }],   
+                            ["@babel/preset-react", {
+                                "runtime": "automatic"
+                            }]
+                        ]
+                    }
+                }
             },
             {
                 test: /\.(css|s[ac]ss)$/i,
@@ -128,7 +140,6 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         // Use NoErrorsPlugin for webpack 1.x
         new webpack.NoEmitOnErrorsPlugin(),
-        // new MyPlugin()
     ],
 
     resolve: {

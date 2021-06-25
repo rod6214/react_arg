@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const path = require('path');
+// const path = require('path');
 const middleware = require("webpack-dev-middleware");
 var webpackConfig = require('./webpack.config');
 
