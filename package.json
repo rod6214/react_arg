@@ -2,11 +2,11 @@
   "name": "arg_framework",
   "author": "Nelson Amador",
   "license": "ISC",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "React template",
   "main": "main.js",
   "bin": {
-    "xserver": "bin/arg_framework.js",
+    "xserver": "bin/exec_build.js",
     "build": "bin/exec_build.js",
     "test": "bin/exec_test.js"
   },
