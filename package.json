@@ -2,7 +2,7 @@
   "name": "arg_framework",
   "author": "Nelson Amador",
   "license": "ISC",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "React template",
   "main": "main.js",
   "bin": {
@@ -11,9 +11,9 @@
     "xtest": "bin/exec_test.js"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "node server.js",
-    "test": "jest"
+    "build": "node bin/exec_build.js",
+    "start": "node bin/exec_server.js",
+    "test": "node bin/exec_test.js"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
