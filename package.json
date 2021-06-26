@@ -2,7 +2,7 @@
   "name": "arg_framework",
   "author": "Nelson Amador",
   "license": "ISC",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "React template",
   "main": "main.js",
   "bin": {
