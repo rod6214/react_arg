@@ -2,7 +2,7 @@
   "name": "arg_framework",
   "author": "Nelson Amador",
   "license": "ISC",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "React template",
   "main": "main.js",
   "bin": {
@@ -14,24 +14,6 @@
     "build": "webpack --mode production",
     "start": "node server.js",
     "test": "jest"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "jsdom",
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    },
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/tests/setupTests.js"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/babelTransform.js"
-    },
-    "resetMocks": true,
-    "testRunner": "C:\\Develop\\meliapp\\node_modules\\jest-circus\\runner.js"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
@@ -76,5 +58,23 @@
     "xml-loader": "^1.2.1",
     "yamljs": "^0.3.0"
   },
-  "browseslist": "> 0.25, not dead, not ie 11"
+  "browseslist": "> 0.25, not dead, not ie 11",
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/tests/setupTests.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/babelTransform.js"
+    },
+    "resetMocks": true,
+    "testRunner": "C:\\Develop\\meliapp\\node_modules\\jest-circus\\runner.js"
+  }
 }
