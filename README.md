@@ -2,7 +2,7 @@
 
 # ARG Framework
 
-With a series of ready-to-use solutions, this project is an independent solution from the one offered by the creat-react-app command, in addition, you can extend this solution depending on the needs of your project. This solution is integrated with express therefore you can develop your own server side render, at the moment it has not been integrated as SSR.
+Ready-to-use environment to develop react applications, this project is similar to *creat-react-app* but independent from it, besides, you can extend this solution depending on the needs of your project. This solution is integrated with express, therefore, you can develop your own server side render, at the moment SSR is not supported by default, even though, it's easy to integrate with a custom server router or with any other third part like [NextJS](https://nextjs.org/).
 
 ## 🚀 Getting Started 
 
