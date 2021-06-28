@@ -2,7 +2,7 @@
   "name": "arg_framework",
   "author": "Nelson Amador",
   "license": "ISC",
-  "version": "1.4.10",
+  "version": "1.5.0",
   "description": "React template",
   "main": "main.js",
   "bin": {
@@ -14,6 +14,11 @@
     "build": "node bin/exec_build.js",
     "start": "node bin/exec_server.js",
     "test": "node bin/exec_test.js"
+  },
+  "homepage": "https://github.com/rod6214/react_arg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rod6214/react_arg.git"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
