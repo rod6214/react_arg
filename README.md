@@ -28,4 +28,8 @@ In the src folder there are templates to begin creating your application includi
 
 ## 😃 REACT Template
 
-This is a template that uses the arg framework ([here](https://github.com/rod6214/react_template))
+This is a template that uses the arg framework ([here](https://github.com/rod6214/react_template)).
+
+## ❤️ Feedback
+
+We appreciate any feedback by sending suggestions to the email address rod6214@gmail.com or feel free to open an [issue](https://github.com/rod6214/react_arg/issues) | [pull request](https://github.com/rod6214/react_arg/pulls) to improve this project for the open source community.
