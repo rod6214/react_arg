@@ -6,11 +6,37 @@ const path = require('path');
 
 let argv = process.argv.slice(2);
 
+function getJestAliases(options = {}) {
+    const baseUrl = options.baseUrl;
+  
+    if (!baseUrl) {
+      return {};
+    }
+  
+    const baseUrlResolved = path.resolve(paths.appPath, baseUrl);
+  
+    if (path.relative(paths.appPath, baseUrlResolved) === '') {
+      return {
+        '^src/(.*)$': '<rootDir>/src/$1',
+      };
+    }
+  }
+  
+
 const createJestConfig = (resolve) => {
-    config.transform['^.+\\.(js|jsx|mjs|cjs|ts|tsx)$'] = resolve("config/babelTransform.js");
+    config.transform = {
+        '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$': resolve(
+          'transform/babelTransform.js'
+        ),
+        '^.+\\.css$': resolve('transform/cssTransform.js'),
+        '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': resolve(
+          'transform/fileTransform.js'
+        ),
+    },
     config.moduleNameMapper = {
-        "\\\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": resolve("__mocks__/fileMock.js"),
-        "\\\\.(css|less|scss)$": resolve("__mocks__/styleMock.js")
+        '^react-native$': 'react-native-web',
+        '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+        ...(getJestAliases || {}),
     }
     return config;
 }
@@ -23,5 +49,5 @@ argv.push(
         )
     )
 );
-
+// console.log(argv)
 jest.run(argv).then(()=>{}, ()=>{});

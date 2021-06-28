@@ -2,7 +2,7 @@
   "name": "arg_framework",
   "author": "Nelson Amador",
   "license": "ISC",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "React template",
   "main": "main.js",
   "bin": {
@@ -65,6 +65,7 @@
   },
   "browseslist": "> 0.25, not dead, not ie 11",
   "jest": {
+    "verbose": true,
     "roots": [
       "<rootDir>/src"
     ],
