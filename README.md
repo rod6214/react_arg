@@ -1,3 +1,5 @@
+[![ARG Framework CI](https://github.com/rod6214/react_arg/actions/workflows/arg-actions.yml/badge.svg)](https://github.com/rod6214/react_arg/actions/workflows/arg-actions.yml)
+
 # ARG Framework
 
 With a series of ready-to-use solutions, this project is an independent solution from the one offered by the creat-react-app command, in addition, you can extend this solution depending on the needs of your project. This solution is integrated with express therefore you can develop your own server side render, at the moment it has not been integrated as SSR.
